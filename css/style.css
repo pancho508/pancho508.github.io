@@ -1,3 +1,27 @@
 body {
-    background-color: lightblue;
+    background-color: blue;
+}
+
+div.a {
+    text-align: center;
+    font-family: "Optima", sans-serif;
+}
+
+div.b {
+    text-align: left;
+    font-family: "Optima", sans-serif;
+}
+
+div.c {
+    text-align: right;
+    font-family: "Optima", sans-serif;
+}
+
+div.d {
+    text-align: justify;
+    font-family: "Optima", sans-serif;
+}
+
+p {
+    font-family: "Optima", sans-serif;
 }
