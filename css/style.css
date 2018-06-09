@@ -1,27 +1,37 @@
 body {
-    background-color: blue;
+    background-color: rgb(25, 0, 0);
 }
 
 div.a {
     text-align: center;
     font-family: "Optima", sans-serif;
+    color: white
 }
+
 
 div.b {
-    text-align: left;
-    font-family: "Optima", sans-serif;
-}
-
-div.c {
     text-align: right;
     font-family: "Optima", sans-serif;
 }
 
-div.d {
+div.c {
     text-align: justify;
     font-family: "Optima", sans-serif;
 }
-
 p {
     font-family: "Optima", sans-serif;
+}
+
+.menu{
+background-color:red;
+overflow: hidden;
+}
+
+.menu a{
+  float: center;
+  color: black;
+  text-align-center;
+  padding: 20px 30px;
+  text-decoration: "Times New Roman";
+  font-seize: 20px;
 }
