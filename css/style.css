@@ -11,11 +11,13 @@ div.a {
 div.b {
     text-align: right;
     font-family: "Optima", sans-serif;
+    color: white
 }
 
 div.c {
     text-align: justify;
     font-family: "Optima", sans-serif;
+    color: white
 }
 
 p {
@@ -23,15 +25,16 @@ p {
 }
 
 .menu{
-background-color:red;
-overflow: hidden;
+  background-color:red;
+  overflow: hidden;
+  color: rgb(200, 200, 200);
+
 }
 
 .menu a{
   float: center;
   color: black;
-  text-align-center;
   padding: 20px 30px;
   text-decoration: "Times New Roman";
-  font-seize: 20px;
+  font-size: 20px;
 }
