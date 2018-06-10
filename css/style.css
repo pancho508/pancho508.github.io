@@ -8,7 +8,6 @@ div.a {
     color: white
 }
 
-
 div.b {
     text-align: right;
     font-family: "Optima", sans-serif;
@@ -18,6 +17,7 @@ div.c {
     text-align: justify;
     font-family: "Optima", sans-serif;
 }
+
 p {
     font-family: "Optima", sans-serif;
 }
