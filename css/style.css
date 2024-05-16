@@ -1,40 +1,78 @@
+/* Base styles */
 body {
-    background-color: rgb(25, 0, 0);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-div.a {
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
-    font-family: "Optima", sans-serif;
-    color: white
 }
 
-div.b {
-    text-align: right;
-    font-family: "Optima", sans-serif;
-    color: white
+header h1 {
+    margin: 0;
 }
 
-div.c {
-    text-align: justify;
-    font-family: "Optima", sans-serif;
-    color: white
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-p {
-    font-family: "Optima", sans-serif;
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-.menu{
-  background-color:red;
-  overflow: hidden;
-  color: rgb(200, 200, 200);
-
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.menu a{
-  float: center;
-  color: black;
-  padding: 20px 30px;
-  text-decoration: "Times New Roman";
-  font-size: 20px;
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+section#about {
+    background: #e2e2e2;
+}
+
+section#projects .project {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section#contact {
+    background: #e2e2e2;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 1rem;
+    }
 }
