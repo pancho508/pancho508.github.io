@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000000;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .bubble {
+            background: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .bubble:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bubble h2 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .bubble hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 10px 0;
+        }
+
+        .bubble p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .bubble img {
+            width: 120px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .bubble-content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container" id="blog-container">
+        <!-- Bubbles will be dynamically inserted here -->
+    </div>
+
+    <script>
+        // Fetch blog entries from a JSON file
+        fetch('/src/blog/postText.json')
+            .then(response => response.json())
+            .then(posts => {
+                const blogContainer = document.getElementById('blog-container');
+
+                // Function to dynamically create a bubble
+                function createBubble(post) {
+                    const bubble = document.createElement('div');
+                    bubble.className = 'bubble';
+                    bubble.innerHTML = `
+                        <img src="${post.imgUrl}" alt="${post.title}">
+                        <div class="bubble-content">
+                            <h2>${post.title}</h2>
+                            <hr />
+                            <p>${post.body}</p>
+                        </div>
+                    `;
+
+                    blogContainer.appendChild(bubble);
+                }
+
+                // Dynamically load all posts
+                posts.forEach(post => createBubble(post));
+            })
+            .catch(error => console.error('Error loading posts:', error));
+    </script>
+</body>
+</html>
